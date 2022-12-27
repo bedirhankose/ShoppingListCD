@@ -20,15 +20,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NZf-5C-1tb">
                                 <rect key="frame" x="0.0" y="103" width="393" height="715"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NZf-5C-1tb" secondAttribute="trailing" id="9kB-IA-Wb7"/>
-                            <constraint firstItem="NZf-5C-1tb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="RaV-2d-hcc"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="NZf-5C-1tb" secondAttribute="bottom" id="Ryo-6a-hNw"/>
-                            <constraint firstItem="NZf-5C-1tb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="jYj-E8-DGt"/>
+                            <constraint firstItem="NZf-5C-1tb" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Ng6-yj-4tO"/>
+                            <constraint firstItem="NZf-5C-1tb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mdj-sg-mNf"/>
+                            <constraint firstItem="NZf-5C-1tb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="npF-JZ-lnH"/>
+                            <constraint firstItem="NZf-5C-1tb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="sKo-Ci-AVN"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="SVf-Ug-ddP"/>
