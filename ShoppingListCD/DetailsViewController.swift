@@ -15,6 +15,8 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var nameProduct: UITextField!
     @IBOutlet weak var priceProduct: UITextField!
     @IBOutlet weak var sizeProduct: UITextField!
+    @IBOutlet weak var saveButton: UIButton!
+    
     
     var ChosenProductName = ""
     var ChosenProductID : UUID?
@@ -23,6 +25,9 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         super.viewDidLoad()
         
         if ChosenProductName != "" {
+            
+            saveButton.isHidden = true
+            
             //It shows CoreData chosen product information.
             if let uuidString = ChosenProductID?.uuidString {
                 let appDelegate = UIApplication.shared.delegate as! AppDelegate
@@ -64,6 +69,8 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
             }
             
         } else{
+            saveButton.isHidden = false
+            saveButton.isEnabled = false
             nameProduct.text = ""
             priceProduct.text = ""
             sizeProduct.text = ""
@@ -87,6 +94,7 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         imageView.image = info[.originalImage] as? UIImage
+        saveButton.isEnabled = true
         self.dismiss(animated: true)
     }
     
