@@ -108,6 +108,7 @@
                         <outlet property="imageView" destination="rdU-rY-TDp" id="ajc-gF-ztx"/>
                         <outlet property="nameProduct" destination="2jb-cf-QuX" id="vna-Y1-KAg"/>
                         <outlet property="priceProduct" destination="ZcL-4Y-I6J" id="iTo-HS-D4E"/>
+                        <outlet property="saveButton" destination="ckG-Og-5mm" id="UUl-DX-hvK"/>
                         <outlet property="sizeProduct" destination="ntc-EK-2VO" id="4cC-u4-nNz"/>
                     </connections>
                 </viewController>
