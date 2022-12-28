@@ -15,6 +15,9 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     var nameArray = [String]()
     var idArray = [UUID]()
     
+    var ChosenName = ""
+    var ChosenID : UUID?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -67,7 +70,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     @objc func addButtonTapped() {
-        
+        ChosenName = ""
         performSegue(withIdentifier: "toDetailsVC", sender: nil)
         
     }
@@ -79,6 +82,20 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         let cell = UITableViewCell()
         cell.textLabel?.text = nameArray[indexPath.row]
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toDetailsVC" {
+            let destinationVC = segue.destination as! DetailsViewController
+            destinationVC.ChosenProductName = ChosenName
+            destinationVC.ChosenProductID = ChosenID
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        ChosenName = nameArray[indexPath.row]
+        ChosenID = idArray[indexPath.row]
+        performSegue(withIdentifier: "toDetailsVC", sender: nil)
     }
     
 }
