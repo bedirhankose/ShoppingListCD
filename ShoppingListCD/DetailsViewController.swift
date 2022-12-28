@@ -49,7 +49,7 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
-        let shopping = NSEntityDescription.insertNewObject(forEntityName: "Shopping", into: context)
+        let shopping = NSEntityDescription.insertNewObject(forEntityName: "ShoppingDatabase", into: context)
         shopping.setValue(nameProduct.text!, forKey: "name")
         shopping.setValue(sizeProduct.text!, forKey: "size")
         
