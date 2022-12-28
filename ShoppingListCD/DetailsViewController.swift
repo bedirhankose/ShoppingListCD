@@ -16,8 +16,23 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var priceProduct: UITextField!
     @IBOutlet weak var sizeProduct: UITextField!
     
+    var ChosenProductName = ""
+    var ChosenProductID : UUID?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if ChosenProductName != "" {
+            //It shows CoreData chosen product information.
+            if let uuidString = ChosenProductID?.uuidString {
+                print(uuidString)
+            }
+            
+        } else{
+            nameProduct.text = ""
+            priceProduct.text = ""
+            sizeProduct.text = ""
+        }
 
         let gestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(closeTheKeyboard))
         view.addGestureRecognizer(gestureRecognizer)
