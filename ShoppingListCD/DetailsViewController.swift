@@ -71,6 +71,10 @@ class DetailsViewController: UIViewController, UIImagePickerControllerDelegate, 
         }catch {
             print("Error")
         }
+        
+        NotificationCenter.default.post(name: NSNotification.Name("Data has been entered."), object: nil)
+        self.navigationController?.popViewController(animated: true)
+        
     }
     
    
