@@ -27,9 +27,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         getDatas()
     }
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(getDatas), name: NSNotification.Name("Data has been entered."), object: nil)
+    }
     
     
-    func getDatas() {
+    @objc func getDatas() {
+        
+        nameArray.removeAll(keepingCapacity: false)
+        idArray.removeAll(keepingCapacity: false)
+        
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context = appDelegate.persistentContainer.viewContext
         
