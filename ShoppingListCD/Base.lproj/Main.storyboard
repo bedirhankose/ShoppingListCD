@@ -85,7 +85,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kQ7-Oe-oN6"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
                             <constraint firstItem="2jb-cf-QuX" firstAttribute="leading" secondItem="ZcL-4Y-I6J" secondAttribute="leading" id="0yP-AI-X4u"/>
                             <constraint firstItem="ZcL-4Y-I6J" firstAttribute="top" secondItem="2jb-cf-QuX" secondAttribute="bottom" constant="25" id="2mM-Wo-fNe"/>
@@ -138,6 +138,9 @@
     </scenes>
     <resources>
         <image name="firstImage" width="277" height="168"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
