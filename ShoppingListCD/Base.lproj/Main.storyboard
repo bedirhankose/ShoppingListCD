@@ -52,6 +52,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="firstImage" translatesAutoresizingMaskIntoConstraints="NO" id="rdU-rY-TDp">
                                 <rect key="frame" x="0.0" y="103" width="393" height="335"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="335" id="KR2-3E-k8x"/>
                                 </constraints>
